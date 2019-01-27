@@ -1,2 +1,3 @@
 # Functional
 
+Learn functional programming
