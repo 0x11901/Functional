@@ -59,7 +59,6 @@ dkms.conf
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -170,3 +169,6 @@ fabric.properties
 .idea/httpRequests
 
 .idea/
+
+# phoityen-vscode
+.stack-work
