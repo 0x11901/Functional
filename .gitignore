@@ -172,3 +172,6 @@ fabric.properties
 
 # phoityen-vscode
 .stack-work
+
+# vs code
+.vscode
