@@ -17,7 +17,7 @@ import           Prelude                 hiding ( (/=)
 not :: Bool -> Bool
 not True  = False
 not False = True
-not _     = False
+-- not _     = False
 
 xor, and, or :: Bool -> Bool -> Bool
 xor b1 b2 = not (b1 == b2)
