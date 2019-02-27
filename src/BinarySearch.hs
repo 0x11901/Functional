@@ -1,3 +1,5 @@
+module BinarySearch where
+
 search :: (Ord a) => a -> [a] -> Bool
 search a [] = False
 search a xs | m < a     = search a behind

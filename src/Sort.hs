@@ -1,4 +1,5 @@
--- Sort.hs
+module Sort where
+
 insert' :: Ord a => a -> [a] -> [a]
 insert' x [] = [x]
 insert' x (y : ys) | x < y     = x : y : ys
@@ -27,17 +28,17 @@ bubbleSort' xs | swaps xs == xs = xs
 bubbleSort'' :: Ord a => [a] -> [a]
 bubbleSort'' [] = []
 bubbleSort'' xs = bubbleSort'' initialElements ++ [lastElement]
-  where
-    swappedxs       = swaps xs
-    initialElements = init swappedxs
-    lastElement     = last swappedxs
+ where
+  swappedxs       = swaps xs
+  initialElements = init swappedxs
+  lastElement     = last swappedxs
 
 quickSort :: Ord a => [a] -> [a]
 quickSort []       = []
 quickSort (x : xs) = quickSort mini ++ [x] ++ quickSort maxi
-  where
-    mini = filter (< x) xs
-    maxi = filter (>= x) xs
+ where
+  mini = filter (< x) xs
+  maxi = filter (>= x) xs
 
 merge :: Ord a => [a] -> [a] -> [a]
 merge xs [] = xs
@@ -49,7 +50,7 @@ mergeSort :: Ord a => [a] -> [a]
 mergeSort []  = []
 mergeSort [x] = [x]
 mergeSort xs  = merge (mergeSort x1) (mergeSort x2)
-  where
-    (x1, x2) = halve xs
-    halve xs = (take l xs, drop l xs)
-    l = length xs `div` 2
+ where
+  (x1, x2) = halve xs
+  halve xs = (take l xs, drop l xs)
+  l = length xs `div` 2
