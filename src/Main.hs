@@ -7,10 +7,14 @@ main = putStrLn "no head feelings"
 
 length' xs = sum [ 1 | _ <- xs ]
 
-xxs =
-    [ [1, 3, 5, 2, 3, 1, 2, 4, 5]
-    , [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    , [1, 2, 4, 2, 1, 6, 3, 1, 3, 2, 3, 6]
-    ]
-
+bmiTell :: Double -> Double -> String
+bmiTell weight height
+    | weight / height ^ 2 <= 18.5
+    = "You're underweight, you emo, you!"
+    | weight / height ^ 2 <= 25.0
+    = "You're supposedly normal. Pffft, I bet you're ugly!"
+    | weight / height ^ 2 <= 30.0
+    = "You're fat! Lose some weight, fatty!"
+    | otherwise
+    = "You're a whale, congratulations!"
 
