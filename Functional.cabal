@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: e1a2e851eff95611dd8fab9d6836b86e8676b9d1ec0c8e238f931d9bdf91c8e1
+-- hash: f9b02bd683b305fd3ace089156452015776341a8588ed85438790ce55ec4fb64
 
 name:           Functional
 version:        0.1.0.0
@@ -27,7 +27,14 @@ source-repository head
 
 library
   exposed-modules:
+      Baby
+      BinarySearch
+      Boolean
+      Calendar
       Lib
+      Rome
+      Sort
+      Test
   other-modules:
       Paths_Functional
   hs-source-dirs:
