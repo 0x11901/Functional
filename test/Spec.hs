@@ -35,3 +35,7 @@ zipWith' :: (a -> b -> c) -> [a] -> [b] -> [c]
 zipWith' _ []       _        = []
 zipWith' _ _        []       = []
 zipWith' f (x : xs) (y : ys) = f x y : zipWith' f xs ys
+
+elem'' :: (Eq a) => a -> [a] -> Bool
+-- elem'' y ys = foldr (\x acc -> if x == y then True else acc) False ys
+elem'' y = foldr (\x acc -> (x == y) || acc) False
