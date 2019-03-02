@@ -39,3 +39,6 @@ zipWith' f (x : xs) (y : ys) = f x y : zipWith' f xs ys
 elem'' :: (Eq a) => a -> [a] -> Bool
 -- elem'' y ys = foldr (\x acc -> if x == y then True else acc) False ys
 elem'' y = foldr (\x acc -> (x == y) || acc) False
+
+oddSquareSum :: Integer
+oddSquareSum = sum . takeWhile (< 10000) . filter odd $ map (^ 2) $ [1 ..]
